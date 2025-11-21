@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Crear Películas</title>
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light border">
+    <div class="container">
+      <a class="navbar-brand" href="#">MovieHenry</a>
+      <div class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="../index.html"> Inicio </a></li>
+          <li class="nav-item"><a class="nav-link" href="./verPeliculas.html"> Películas </a></li>
+          <li class="nav-item"><a class="nav-link" href="#"> Crear Película </a></li>
+          <li class="nav-item"><a class="nav-link" href="./SobreElProyecto.html"> Sobre el proyecto </a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Formulario -->
+  <div class="container mt-4">
+    <!-- ✅ Único mensaje de éxito -->
+    <div id="mensaje-exito" class="alert alert-success" style="display: none;">
+      Película guardada con éxito 🎉
+    </div>
+
+    <h2>Crear Películas</h2>
+    <form>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="nombre" class="form-label">Nombre Película:</label>
+          <input type="text" class="form-control" id="nombre" placeholder="Jurassic World: Rebirth" required>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="lanzamiento" class="form-label">Año Lanzamiento:</label>
+          <input type="number" class="form-control" id="lanzamiento" placeholder="2001" required>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="duracion" class="form-label">Duración:</label>
+          <input type="text" class="form-control" id="duracion" placeholder="2 h 16 min" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <label for="director" class="form-label">Director:</label>
+          <input type="text" class="form-control" id="director" placeholder="Simón Brand" required>
+        </div>
+        <div class="col-md-6 mb-3">
+          <label for="calificacion" class="form-label">Calificación:</label>
+          <input type="text" class="form-control" id="calificacion" placeholder="Ingresa números del 1 al 10" required>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 mb-3">
+          <label class="form-label">Género:</label>
+          <div class="d-flex flex-wrap gap-3">
+            <div class="form-check">
+              <input class="form-check-input genero-check" type="checkbox" value="Drama" id="genero-drama">
+              <label class="form-check-label" for="genero-drama">Drama</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input genero-check" type="checkbox" value="Comedia" id="genero-comedia">
+              <label class="form-check-label" for="genero-comedia">Comedia</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input genero-check" type="checkbox" value="Acción" id="genero-accion">
+              <label class="form-check-label" for="genero-accion">Acción</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input genero-check" type="checkbox" value="Terror" id="genero-terror">
+              <label class="form-check-label" for="genero-terror">Terror</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input genero-check" type="checkbox" value="Musical" id="genero-musical">
+              <label class="form-check-label" for="genero-musical">Musical</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input genero-check" type="checkbox" value="Aventura" id="genero-aventura">
+              <label class="form-check-label" for="genero-aventura">Aventura</label>
+            </div>
+          </div>
+
+          <!-- Mensaje de error -->
+          <div id="error-genero" class="text-danger mt-2" style="display: none;">
+            Debes seleccionar al menos un género.
+          </div>
+        </div>
+      </div>
+
+      <!-- Campo URL de imagen -->
+      <div class="mb-3">
+        <label for="url" class="form-label">URL de la imagen de la película:</label>
+        <input type="url" class="form-control" id="url" placeholder="https://ejemplo.com/imagen.jpg" required>
+      </div>
+
+      <!-- Botones -->
+      <button type="submit" class="btn btn-primary">Guardar</button>
+      <button type="reset" class="btn btn-secondary" id="resetear">Limpiar</button>
+    </form>
+
+  </div>
+
+  <script src="../public/bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
